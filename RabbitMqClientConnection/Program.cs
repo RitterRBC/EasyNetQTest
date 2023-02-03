@@ -19,7 +19,7 @@ namespace RabbitMqClientConnection
             //};
             var connectionFactory = new ConnectionFactory
             {
-                Uri = new Uri(@"amqp://localhost/?connection_timeout=72000")
+                Uri = new Uri(@"amqp://admin:onlineAG01@thd-vostro-1500/?connection_timeout=72000")
             };
 
             using var connection = connectionFactory.CreateConnection();

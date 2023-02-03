@@ -10,7 +10,7 @@ namespace MultiBindingTestConsumer
         {
             Console.WriteLine("Starting Consumer...");
 
-            using var bus = RabbitHutch.CreateBus("host=localhost").Advanced;
+            using var bus = RabbitHutch.CreateBus("host=thd-vostro-1500;virtualHost=/;username=admin;password=onlineAG01").Advanced;
 
             var exchange = bus.ExchangeDeclare(Messages.Constants.MultiBindingExchange, "topic");
             var queue = bus.QueueDeclare("multibinding.test.consumer");

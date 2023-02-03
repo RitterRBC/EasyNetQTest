@@ -8,10 +8,10 @@ namespace Subscriber
     {
         static void Main(string[] args)
         {
-            using (var bus = RabbitHutch.CreateBus("amqp://localhost/;timeout=72"))
-            //using (var bus = RabbitHutch.CreateBus("host=localhost;timeout=72"))
+            //using (var bus = RabbitHutch.CreateBus("amqp://admin:onlineAG01@thd-vostro-1500/"))
+            using (var bus = RabbitHutch.CreateBus("host=thd-vostro-1500;virtualHost=/;username=admin;password=onlineAG01"))
             {
-                bus.Subscribe<TextMessage>("test", HandleTextMessage);
+                bus.PubSub.Subscribe<TextMessage>("test", HandleTextMessage);
 
                 Console.WriteLine("Listening for messages. Hit <return> to quit.");
                 Console.ReadLine();

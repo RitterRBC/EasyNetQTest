@@ -1,5 +1,8 @@
-﻿namespace Messages
+﻿using EasyNetQ;
+
+namespace Messages
 {
+    [Queue("TestQ", ExchangeName = "TestEx")]
     public class TextMessage
     {
         public string Text { get; set; } 

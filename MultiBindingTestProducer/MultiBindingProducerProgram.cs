@@ -10,7 +10,7 @@ namespace MultiBindingTestProducer
         {
             Console.WriteLine("Starting Producer...");
 
-            using var bus = RabbitHutch.CreateBus("host=localhost").Advanced;
+            using var bus = RabbitHutch.CreateBus("host=thd-vostro-1500;virtualHost=/;username=admin;password=onlineAG01").Advanced;
 
             var exchange = bus.ExchangeDeclare(Messages.Constants.MultiBindingExchange, ExchangeType.Topic);
 
