@@ -9,7 +9,7 @@ namespace Management
     {
         static void Main(string[] args)
         {
-            using (var initial = new ManagementClient("thd-vostro-1500", "admin", "onlineAG01"))
+            using (var initial = new ManagementClient("DEV-SERVER01", "admin", "onlineAG01"))
             {
                 var exchanges = initial.GetExchanges();
 
