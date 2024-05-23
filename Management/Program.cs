@@ -18,7 +18,8 @@ namespace Management
                     Console.Out.WriteLine("Delete exchange = {0} ...", exchange.Name);
                     initial.DeleteExchange(exchange);
                 }
-                //foreach (Exchange exchange in exchanges.Where(x => (x.Name.StartsWith("NS") || x.Name.StartsWith("OM") || x.Name.StartsWith("IS") || x.Name.StartsWith("PrestigeEnterprise"))))
+                //exchanges = initial.GetExchanges();
+                //foreach (Exchange exchange in exchanges.Where(x => x.Name.StartsWith("NoS")))
                 //{
                 //    Console.Out.WriteLine("Delete exchange = {0} ...", exchange.Name);
                 //    initial.DeleteExchange(exchange);
@@ -31,7 +32,8 @@ namespace Management
                     Console.Out.WriteLine("Delete queue = {0} ...", queue.Name);
                     initial.DeleteQueue(queue);
                 }
-                //foreach (Queue queue in queues.Where(x => (x.Name.StartsWith("NS") || x.Name.StartsWith("OM") || x.Name.StartsWith("IS") || x.Name.StartsWith("PrestigeEnterprise"))))
+                //queues = initial.GetQueues();
+                //foreach (Queue queue in queues.Where(x => x.Name.StartsWith("NoS")))
                 //{
                 //    Console.Out.WriteLine("Delete queue = {0} ...", queue.Name);
                 //    initial.DeleteQueue(queue);
